@@ -5,23 +5,22 @@
  */
 
 const getRandomColors = (num: number): string[] => {
-  const COLORS = ["aliceblue","antiquewhite","aqua","aquamarine","azure","beige","bisque",
-    "black","blanchedalmond","blue","blueviolet","brown","burlywood","cadetblue","chartreuse",
-    "chocolate","coral","cornflowerblue","cornsilk","crimson","cyan","darkblue","darkcyan",
-    "darkgoldenrod","darkgray","darkgreen","darkgrey","darkkhaki","darkmagenta",
-    "darkolivegreen","darkorange","darkorchid","darkred","darksalmon","darkseagreen",
-    "darkslateblue","darkslategray","darkslategrey","darkturquoise","darkviolet","deeppink",
-    "deepskyblue","dimgray","dimgrey","dodgerblue","firebrick","floralwhite","forestgreen",
-    "fuchsia","gainsboro","ghostwhite","gold","goldenrod","gray","green","greenyellow","grey",
-    "honeydew","hotpink","indianred","indigo","ivory","khaki","lavender","lavenderblush"
+  const COLORS = [
+    'black','blue','brown','chocolate','coral','crimson','darkblue','darkcyan',
+    'darkgoldenrod','darkgray','darkgreen','darkkhaki','darkmagenta','darkolivegreen',
+    'darkorange','darkorchid','darkred','darksalmon','darkslateblue','darkslategray',
+    'darkturquoise','darkviolet','deeppink','firebrick','forestgreen','fuchsia',
+    'goldenrod','green','indigo','maroon','mediumblue','mediumorchid','mediumseagreen',
+    'mediumslateblue','mediumvioletred', 'navy','olive','olivedrab', 'orangered',
+    'purple','red','saddlebrown','salmon','sienna','slateblue','slategray', 'steelblue',
+    'teal','tomato','violet'
   ];
   const getRandomNum = ():number => (Math.floor(Math.random() * (COLORS.length - 1)) + 0);
   const result = [COLORS[getRandomNum()]];
   while(result.length < num) {
-    const nextRandomNum = getRandomNum();
-    const nextColor = COLORS[nextRandomNum];
+    const nextColor = COLORS[getRandomNum()];
     if(result.indexOf(nextColor) < 0) {
-      result.push(nextColor)
+      result.push(nextColor);
     }
   }
   return result;

@@ -1,3 +1,7 @@
+# Watch Live CBS Sports
+- I chose to use *.scss to style most of the elements to SSR as much content as possible for performance. Styled-components seems to not be well supported with the latest version of Next. However, since the `background` element is more dynamic, thus client side, I chose to use a style object which allows the component to render server side and rerender client side when the `button` is clicked (colors change). I proved this renders server side by disabling javascript in the browser and seeing the default colors.
+- For the list of `background` colors, I only use dark colors that have a high contrast with the white letters to be compliant with Accessibility standards.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

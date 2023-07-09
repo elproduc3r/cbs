@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartButton snapshot 1`] = `
+<div>
+  <button
+    class="start-button"
+  >
+    Get Started
+  </button>
+</div>
+`;
