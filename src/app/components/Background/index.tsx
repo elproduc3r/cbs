@@ -1,8 +1,6 @@
 "use client"
 
 import React, {createContext, useState, MouseEventHandler} from 'react';
-import styled,  { StyleSheetManager } from "styled-components";
-import isPropValid from '@emotion/is-prop-valid';
 import getRandomColors from '../../utils/getRandomColors';
 
 export interface BackgroundProps {
@@ -39,13 +37,11 @@ const Background = ({
   };
 
   return (
-    <StyleSheetManager shouldForwardProp={isPropValid}>
-      <BackgroundContext.Provider value={{changeBackground}}>
-        <StyledBackground colors={colors}>
-          {children}
-        </StyledBackground>
-      </BackgroundContext.Provider>
-    </StyleSheetManager>
+    <BackgroundContext.Provider value={{changeBackground}}>
+      <StyledBackground colors={colors}>
+        {children}
+      </StyledBackground>
+    </BackgroundContext.Provider>
   );
 };
 
