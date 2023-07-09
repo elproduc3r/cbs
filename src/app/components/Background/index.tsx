@@ -1,6 +1,7 @@
 "use client"
 
 import React, {createContext, useState, MouseEventHandler} from 'react';
+import styled from "styled-components";
 import getRandomColors from '../../utils/getRandomColors';
 
 export interface BackgroundProps {
