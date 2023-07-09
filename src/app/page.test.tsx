@@ -5,9 +5,9 @@ import Page from './page';
 
 describe('<Page />', () => {
   test('renders button', () => {
-    render(<Page />);
-    const backgroundElement = screen.getByRole("button");
-    expect(backgroundElement).toBeInTheDocument();
+    const { container } = render(<Page />);
+    const button = screen.getByRole("button");
+    expect(button).toBeInTheDocument();
+    expect(container).toMatchSnapshot()
   });  
 });
-

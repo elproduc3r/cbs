@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Page /> renders button 1`] = `
+<div>
+  <div
+    style="height: 100vh; overflow: auto;"
+  >
+    <div
+      class="message-container"
+    >
+      Watch live
+      <br />
+      CBS Sports
+      <button
+        class="start-button"
+      >
+        Get Started
+      </button>
+    </div>
+  </div>
+</div>
+`;

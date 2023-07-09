@@ -1,11 +1,11 @@
 import Background from "./components/Background";
-import StartButton from "./components/StartButton";
+import Message from "./components/Message";
 
 export default function Page() {
   return(
     <>
       <Background>
-        <StartButton />
+        <Message />
       </Background>
     </>
   )

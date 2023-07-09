@@ -1,0 +1,16 @@
+.message-container {
+  margin-top: 16%;
+  margin-left: 20%;
+  max-width: 80%;
+  color: white;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  @media (max-width: 576px) {
+    margin-left: 12%;
+  }
+}
