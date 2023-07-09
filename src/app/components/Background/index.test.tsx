@@ -21,5 +21,7 @@ test('Background has a gradient style', () => {
     </Background>
   );
   const container = screen.getByText(childText);
+
   expect(container).toHaveStyle('height: 100vh');
+  expect(container).toHaveStyle('background-image: linear gradient');
 });
