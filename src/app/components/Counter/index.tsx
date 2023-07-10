@@ -2,7 +2,7 @@
 
 import React, {useEffect, useState} from 'react';
 import { CounterContext } from './CounterContext';
-import { initializePageVisits, resetPageVisits } from '../../utils/pageVisits';
+import { initializePageVisits } from '../../utils/pageVisits';
 
 export interface CounterProps {
   children: React.ReactNode;
