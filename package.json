@@ -47,7 +47,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/jest": "^29.5.2",
-    "@types/styled-components": "^5.1.26",
-    "jest-localstorage-mock": "^2.4.26"
+    "@types/styled-components": "^5.1.26"
   }
 }
