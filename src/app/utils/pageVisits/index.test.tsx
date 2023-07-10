@@ -39,6 +39,18 @@ describe("pageVisits (utils)", () => {
       const nextVisit = initializePageVisits();
       expect(nextVisit).toBe(mockData.pageVisits + 2);
     });
+    test('resets pageVisit to 1 when reset arg is true', () => {
+      const mockData = {
+        pageVisits: 10
+      };
+      localStorage.setItem(CBS_KEY, JSON.stringify(mockData));
+      const pageVisits = initializePageVisits(true);
+      expect(pageVisits).toBe(1);
+    });
+    test('resets pageVisit to 1 when there is no data in ls', () => {
+      const pageVisits = initializePageVisits(true);
+      expect(pageVisits).toBe(1);
+    });
   });
   describe("getPageVisits", () => {
     test('returns 1 as default when no data exists in localStorage', () => {
@@ -46,7 +58,7 @@ describe("pageVisits (utils)", () => {
       const result = getPageVisits();
       expect(result).toEqual(1);
     });
-    test('returns correct data', () => {
+    test('returns correct value', () => {
       const mockData = {
         pageVisits: 3
       };
