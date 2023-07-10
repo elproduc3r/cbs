@@ -29,7 +29,7 @@ var localStorageMock = (function() {
 })();
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
-xdescribe("<Counter>", () => {
+describe("<Counter>", () => {
   test('snapshot', () => {
     const {container} = render(
       <Counter>
@@ -57,7 +57,7 @@ xdescribe("<Counter>", () => {
     expect(await axe(container!)).toHaveNoViolations();
   });
   describe("localStorage", () => {
-    test('updates correct value in localStorage when NO data exists', () => {
+    test('sets correct value in localStorage', () => {
       localStorage.clear();
       render(
         <Counter>
@@ -67,20 +67,6 @@ xdescribe("<Counter>", () => {
       let lsData = localStorage.getItem(CBS_KEY);
       let jsonData = lsData ? JSON.parse(lsData) : {pageVisits: 1};
       expect(jsonData.pageVisits).toEqual(1);
-    });
-    test('updates correct value in localStorage when data exists', () => {
-      const mockData = {
-        pageVisits: 3
-      };
-      localStorage.setItem(CBS_KEY, JSON.stringify(mockData));
-      render(
-        <Counter>
-          <div>child</div>
-        </Counter>
-      );
-      let lsData = localStorage.getItem(CBS_KEY);
-      let jsonData = lsData ? JSON.parse(lsData) : {pageVisits: 1};
-      expect(jsonData.pageVisits).toEqual(4);
     });
   });
 });

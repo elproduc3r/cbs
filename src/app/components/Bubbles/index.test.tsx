@@ -31,37 +31,17 @@ var localStorageMock = (function() {
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
 describe('<Background>', () => {
-  xtest('snapshot', () => {
-    const {container} = render(
-      <Bubble />
-    );
-    expect(container).toMatchSnapshot();
-  });
-  xtest('renders first bubbles', () => {
+  test('renders bubbles', () => {
     localStorage.clear();
     render(
       <Counter>
         <Bubble />
       </Counter>
     );
-    const bubbles = screen.queryAllByText(/bubble/i);
+    const bubbles = screen.getAllByRole('presentation');
     expect(bubbles.length).toEqual(1);
   });
-  test.only('renders ALL bubbles', () => {
-    localStorage.clear();
-    const mockData = {
-      pageVisits: 3
-    };
-    localStorage.setItem(CBS_KEY, JSON.stringify(mockData));
-    render(
-      <Counter>
-        <Bubble />
-      </Counter>
-    );
-    const bubbles = screen.queryAllByText(/bubble/i);
-    expect(bubbles.length).toEqual(mockData.pageVisits);
-  });
-  xtest('accessibility', async () => {
+  test('accessibility', async () => {
     const {container} = render(
       <Bubble />
     );

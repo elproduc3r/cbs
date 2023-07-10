@@ -20,7 +20,7 @@ const Bubble = (): JSX.Element => {
   }, []);
 
   return (
-    <span className="bubble" style={styles} aria-hidden="true">bubble</span>
+    <span className="bubble" style={styles} role="presentation"></span>
   )
 };
 
