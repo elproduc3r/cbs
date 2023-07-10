@@ -3,7 +3,7 @@
 exports[`<Page /> renders button 1`] = `
 <div>
   <div
-    style="height: 100vh; overflow: auto;"
+    class="background-container"
   >
     <div>
       Context: 
@@ -22,5 +22,8 @@ exports[`<Page /> renders button 1`] = `
       </button>
     </div>
   </div>
+  <div
+    class="background-gradient"
+  />
 </div>
 `;

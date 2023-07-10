@@ -1,7 +1,10 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import {axe, toHaveNoViolations} from 'jest-axe';
 import {BackgroundContext} from '../Background';
 import StartButton from '../StartButton';
+
+expect.extend(toHaveNoViolations);
 
 describe("<StartButton>", () => {
   test('snapshot', () => {
@@ -21,4 +24,10 @@ describe("<StartButton>", () => {
     fireEvent.click(button);
     expect(mockFn).toHaveBeenCalled();
   });
+  test('accessibility', async () => {
+    const {container} = render(
+      <StartButton />
+    );
+    expect(await axe(container!)).toHaveNoViolations();
+  });  
 });

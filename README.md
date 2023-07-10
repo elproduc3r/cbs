@@ -1,6 +1,10 @@
 # Watch Live CBS Sports
-- I chose to use *.scss to style most of the elements to SSR as much content as possible for performance. Styled-components seems to not be well supported with the latest version of Next. However, since the `background` element is more dynamic, thus client side, I chose to use a style object which allows the component to render server side and rerender client side when the `button` is clicked (colors change). I proved this renders server side by disabling javascript in the browser and seeing the default colors.
-- For the list of `background` colors, I only use dark colors that have a high contrast with the white letters to be compliant with Accessibility standards.
+## SASS
+I chose SASS to style most of the elements to maintain as much SSR as possible for performance. `styled-components` seems to not be well supported with the latest version of Next. However, since the `background` element is more dynamic, thus client side, I chose to use a style object which allows the component to render server side and rerender client side when the `button` is clicked (colors change). I proved this renders server side by disabling javascript in the browser and seeing the default colors.
+## Background Transition
+Since the gradient is done on `background-image`, which isn't animatable, I applied the gradient on an absolute positioned div an position it behind all of the rest of the content. Absolute position was only applied to the `background-gradient` so the rest of the page would follow the natural flow. This was simpler to implement than using flex.
+## `background` Colors
+I only use dark colors that have a high contrast with the white letters to be compliant with Accessibility standards.
 
 # Getting Started with Create React App
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { CBS_KEY } from '../../utils/pageVisits';
+import {axe, toHaveNoViolations} from 'jest-axe';
 import Counter from '.';
 
+expect.extend(toHaveNoViolations);
 
 interface StoreType {
   [index: string]: string;
@@ -45,6 +47,14 @@ describe("<Counter>", () => {
     );
     const textElement = screen.getByText(childText);
     expect(textElement).toBeInTheDocument();
+  });
+  test('accessibility', async () => {
+    const {container} = render(
+      <Counter>
+       child text
+      </Counter>
+    );
+    expect(await axe(container!)).toHaveNoViolations();
   });
   describe("localStorage", () => {
     test('updates correct value in localStorage when NO data exists', () => {

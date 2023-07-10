@@ -8,5 +8,5 @@ describe("<Message>", () => {
       <Message />
     );
     expect(container).toMatchSnapshot();
-  });  
+  });
 });
