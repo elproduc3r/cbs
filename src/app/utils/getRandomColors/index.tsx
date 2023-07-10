@@ -10,7 +10,7 @@ const getRandomColors = (num: number): string[] => {
     'darkgoldenrod','darkgray','darkgreen','darkkhaki','darkmagenta','darkolivegreen',
     'darkorange','darkorchid','darkred','darksalmon','darkslateblue','darkslategray',
     'darkturquoise','darkviolet','deeppink','firebrick','forestgreen','fuchsia',
-    'goldenrod','green','indigo','maroon','mediumblue','mediumorchid','mediumseagreen',
+    'green','indigo','maroon','mediumblue','mediumorchid','mediumseagreen',
     'mediumslateblue','mediumvioletred', 'navy','olive','olivedrab', 'orangered',
     'purple','red','saddlebrown','salmon','sienna','slateblue','slategray', 'steelblue',
     'teal','tomato','violet'
