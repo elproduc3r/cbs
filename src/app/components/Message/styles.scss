@@ -17,4 +17,9 @@
     font-size: 3rem;
     line-height: 3.25rem;
   }
+  @media (max-width: 375px) {
+    margin-left: 12%;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
