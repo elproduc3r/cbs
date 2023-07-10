@@ -5,6 +5,10 @@ exports[`<Page /> renders button 1`] = `
   <div
     style="height: 100vh; overflow: auto;"
   >
+    <div>
+      Context: 
+      1
+    </div>
     <div
       class="message-container"
     >

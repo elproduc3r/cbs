@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React, {createContext, useState, MouseEventHandler} from 'react';
 import getRandomColors from '../../utils/getRandomColors';
@@ -16,7 +16,7 @@ export const BackgroundContext = createContext<BackgroundContextType>({
 
 const Background = ({
   children
-}: BackgroundProps):JSX.Element => {
+}: BackgroundProps): JSX.Element => {
   const [colors, setColors] = useState(["#1d6dd5", "#d529cc"]);
   const changeBackground = (): void => {
     const newColors = getRandomColors(2);
