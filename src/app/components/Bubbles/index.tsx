@@ -29,3 +29,6 @@ const Bubbles = (): JSX.Element => {
 };
 
 export default Bubbles;
+export {
+  Bubble
+};

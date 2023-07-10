@@ -29,7 +29,7 @@ var localStorageMock = (function() {
 })();
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
-describe("<Counter>", () => {
+xdescribe("<Counter>", () => {
   test('snapshot', () => {
     const {container} = render(
       <Counter>

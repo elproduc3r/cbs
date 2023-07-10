@@ -6,9 +6,12 @@ exports[`<Page /> renders button 1`] = `
     class="background-container"
   >
     <span
+      aria-hidden="true"
       class="bubble"
-      style="width: 198px; height: 198px; top: 515px; left: 465px;"
-    />
+      style="width: 212px; height: 212px; top: 118px; left: 764px;"
+    >
+      bubble
+    </span>
     <div
       class="message-container"
     >

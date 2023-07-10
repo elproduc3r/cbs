@@ -18,6 +18,7 @@ const Counter = ({
     let pageVisits = 0;
     const resetPageVisits = reset === "1";
     pageVisits = initializePageVisits(resetPageVisits);
+    console.log(`pageVisits: ${pageVisits}`);
     setPageVisits(pageVisits);
   }, []);
 
