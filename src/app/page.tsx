@@ -1,12 +1,17 @@
-import Background from "./components/Background";
-import Message from "./components/Message";
+import Background from './components/Background';
+import Message from './components/Message';
+import Bubbles from './components/Bubbles';
+import Counter from './components/Counter';
 
 export default function Page() {
   return(
     <>
-      <Background>
-        <Message />
-      </Background>
+      <Counter>
+        <Background>
+          <Bubbles />
+          <Message />
+        </Background>
+      </Counter>
     </>
   )
 }

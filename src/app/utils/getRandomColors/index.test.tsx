@@ -1,4 +1,4 @@
-import getRandomColors from './getRandomColors';
+import getRandomColors from './';
 
 test('returns correct number of colors', () => {
   const size = 1;
