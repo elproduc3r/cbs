@@ -20,7 +20,7 @@ const Bubble = (): JSX.Element => {
   }, []);
 
   return (
-    <span className="bubble" style={styles}></span>
+    <span className="bubble" style={styles} role="presentation"></span>
   )
 };
 

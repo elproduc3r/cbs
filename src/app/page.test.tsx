@@ -5,9 +5,12 @@ import Page from './page';
 
 describe('<Page />', () => {
   test('renders button', () => {
-    const { container } = render(<Page />);
+    render(<Page />);
     const button = screen.getByRole("button");
+    const message = screen.getByText(/watch live/i);
+    const message2 = screen.getByText(/cbs sports/i);
+    expect(message).toBeInTheDocument();
+    expect(message2).toBeInTheDocument();
     expect(button).toBeInTheDocument();
-    expect(container).toMatchSnapshot()
   });  
 });
