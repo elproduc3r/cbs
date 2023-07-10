@@ -1,8 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Background, {BackgroundContext} from '.';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
-describe("<Background>", () => {
+expect.extend(toHaveNoViolations);
+
+describe('<Background>', () => {
   test('snapshot', () => {
     const {container} = render(
       <Background>
@@ -12,7 +15,7 @@ describe("<Background>", () => {
     expect(container).toMatchSnapshot();
   });
   test('renders children', () => {
-    const childText = "child component";
+    const childText = 'child component';
     render(
       <Background>
         <div>{childText}</div>
@@ -21,19 +24,15 @@ describe("<Background>", () => {
     const textElement = screen.getByText(childText);
     expect(textElement).toBeInTheDocument();
   });
-  test('has a gradient style', () => {
-    const childText = "child component";
-    render(
+  test('accessibility', async () => {
+    const {container} = render(
       <Background>
-        {childText}
+       child text
       </Background>
     );
-    const container = screen.getByText(childText);
-    expect(container).toHaveStyle('height: 100vh');
-    expect(container).toHaveStyle('background-image: linear gradient');
-    expect(container).toHaveStyle('overflow: auto');
+    expect(await axe(container!)).toHaveNoViolations();
   });
-  describe("<BackgroundContext.Provider>", () => {
+  describe('<BackgroundContext.Provider>', () => {
     test('function is defined', () => {
       const mockFn = jest.fn(() => {});
       render(

@@ -3,11 +3,14 @@
 exports[`<Background> snapshot 1`] = `
 <div>
   <div
-    style="height: 100vh; overflow: auto;"
+    class="background-container"
   >
     <div>
       child text
     </div>
   </div>
+  <div
+    class="background-gradient"
+  />
 </div>
 `;
