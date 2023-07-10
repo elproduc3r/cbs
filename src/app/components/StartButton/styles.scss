@@ -8,5 +8,10 @@
   border-width: 0px;
   align-self: flex-start;
   text-transform: uppercase;
+  transition: .5s;
   margin-top: 2rem;
+  &:hover {
+    color: forestgreen;
+  }
 }
+
