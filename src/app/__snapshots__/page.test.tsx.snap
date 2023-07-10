@@ -5,10 +5,10 @@ exports[`<Page /> renders button 1`] = `
   <div
     class="background-container"
   >
-    <div>
-      Context: 
-      1
-    </div>
+    <span
+      class="bubble"
+      style="width: 198px; height: 198px; top: 515px; left: 465px;"
+    />
     <div
       class="message-container"
     >

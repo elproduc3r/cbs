@@ -1,8 +1,9 @@
 'use client'
 
-import React, {useState, useEffect, useContext} from 'react';
-import { getPageVisits } from '../../utils/pageVisits';
+import React, {useContext, useEffect, useState} from 'react';
+import Bubble from './Bubble';
 import { CounterContext } from '../Counter';
+import './styles.scss';
 
 export interface BubblesProps {
   children: React.ReactNode;
@@ -10,18 +11,20 @@ export interface BubblesProps {
 
 const Bubbles = (): JSX.Element => {
 
-  const [visitCount, setVisitCount] = useState(1);
+  const [allBubbles, setAllBubbles] = useState([undefined]);
   const {pageVisits} = useContext(CounterContext);
 
   useEffect(() => {
-    
-    // setVisitCount(pageVisits);
-  }, []);
+    const newArray: undefined[] = [...Array(pageVisits)];
+    setAllBubbles(newArray);
+  }, [pageVisits])
   
   return (
-    <div>
-      Context: {pageVisits}
-    </div>
+    <>
+      {allBubbles.map((bubble, index) => (
+        <Bubble key={`${index}-bubble`} />
+      ))}
+    </>   
   );
 };
 

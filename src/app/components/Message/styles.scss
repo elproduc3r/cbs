@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: column;
   font-family: inherit;
+  z-index: 3;
+  position: relative;
   @media (max-width: 576px) {
     margin-left: 12%;
     font-size: 3rem;
